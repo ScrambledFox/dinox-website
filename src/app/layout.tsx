@@ -3,6 +3,10 @@ import * as React from 'react';
 
 import '@/styles/globals.css';
 
+import Footer from '@/components/Footer';
+import NavBar from '@/components/NavBar';
+
+import { bungee, doppio } from '@/app/fonts';
 import { siteConfig } from '@/constant/config';
 
 export const metadata: Metadata = {
@@ -51,8 +55,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
-      <body>{children}</body>
+    <html className={`${bungee.variable} ${doppio.variable} font-primary`}>
+      <body>
+        <NavBar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

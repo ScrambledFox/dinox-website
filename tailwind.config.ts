@@ -6,7 +6,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        primary: ['Inter', ...defaultTheme.fontFamily.sans],
+        primary: ['var(--font-doppio)'],
+        secondary: ['Inter', ...defaultTheme.fontFamily.sans],
+        header: ['var(--font-bungee)'],
+      },
+      backgroundImage: {
+        hero: "url('/images/dinox-crowd.jpg')",
       },
       colors: {
         primary: {

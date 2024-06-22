@@ -14,8 +14,9 @@ const ButtonLinkVariant = [
   'ghost',
   'light',
   'dark',
+  'black',
 ] as const;
-const ButtonLinkSize = ['sm', 'base'] as const;
+const ButtonLinkSize = ['sm', 'xl', '4xl', 'base'] as const;
 
 type ButtonLinkProps = {
   isDarkBg?: boolean;
@@ -42,7 +43,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
       classNames,
       ...rest
     },
-    ref
+    ref,
   ) => {
     return (
       <UnstyledLink
@@ -57,6 +58,8 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
           [
             size === 'base' && ['px-3 py-1.5', 'text-sm md:text-base'],
             size === 'sm' && ['px-2 py-1', 'text-xs md:text-sm'],
+            size === 'xl' && ['px-4 py-2', 'text-lg md:text-xl'],
+            size === '4xl' && ['px-6 py-3', 'text-2xl md:text-2xl'],
           ],
           //#endregion  //*======== Size ===========
           //#region  //*=========== Variants ===========
@@ -83,7 +86,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
                 'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
             ],
             variant === 'light' && [
-              'bg-white text-gray-700',
+              'bg-white text-black',
               'border border-gray-300',
               'hover:text-dark hover:bg-gray-100',
               'active:bg-white/80 disabled:bg-gray-200',
@@ -93,10 +96,15 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
               'border border-gray-600',
               'hover:bg-gray-800 active:bg-gray-700 disabled:bg-gray-700',
             ],
+            variant === 'black' && [
+              'bg-black text-white',
+              'border border-black',
+              'hover:bg-gray-800 active:bg-gray-700 disabled:bg-gray-700',
+            ],
           ],
           //#endregion  //*======== Variants ===========
           'disabled:cursor-not-allowed',
-          className
+          className,
         )}
       >
         {LeftIcon && (
@@ -104,6 +112,8 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
             className={cn([
               size === 'base' && 'mr-1',
               size === 'sm' && 'mr-1.5',
+              size === 'xl' && 'mr-1.5',
+              size === '4xl' && 'mr-2',
             ])}
           >
             <LeftIcon
@@ -112,8 +122,10 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
                 [
                   size === 'base' && 'md:text-md text-md',
                   size === 'sm' && 'md:text-md text-sm',
+                  size === 'xl' && 'md:text-lg text-lg',
+                  size === '4xl' && 'md:text-2xl text-2xl',
                 ],
-                classNames?.leftIcon
+                classNames?.leftIcon,
               )}
             />
           </div>
@@ -124,6 +136,8 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
             className={cn([
               size === 'base' && 'ml-1',
               size === 'sm' && 'ml-1.5',
+              size === 'xl' && 'ml-1.5',
+              size === '4xl' && 'ml-2',
             ])}
           >
             <RightIcon
@@ -132,15 +146,17 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
                 [
                   size === 'base' && 'text-md md:text-md',
                   size === 'sm' && 'md:text-md text-sm',
+                  size === 'xl' && 'md:text-lg text-lg',
+                  size === '4xl' && 'md:text-2xl text-2xl',
                 ],
-                classNames?.rightIcon
+                classNames?.rightIcon,
               )}
             />
           </div>
         )}
       </UnstyledLink>
     );
-  }
+  },
 );
 
 export default ButtonLink;
