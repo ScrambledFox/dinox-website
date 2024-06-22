@@ -47,7 +47,7 @@ const NavigationLinks: FC<NavigationLinkProps> = ({ children }) => {
 
 const NavBar = () => {
   return (
-    <div className='fixed z-50 top-0 w-full py-4 bg-black/50'>
+    <div className='fixed z-50 top-0 w-full max-h-[70px] py-4 bg-black/50'>
       <div className='flex flex-row justify-between mx-4 text-white uppercase font-primary align-middle text-center leading-loose'>
         <NavigationLinks>
           <NavigationLink text='Home' href='/' />
@@ -56,6 +56,7 @@ const NavBar = () => {
         </NavigationLinks>
         <a href='/'>
           <Image
+            priority
             src='/images/logo-text.png'
             alt='logo'
             width={200}
