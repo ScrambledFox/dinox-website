@@ -1,10 +1,10 @@
-import Socials from '@/components/links/Socials';
+import Socials from '@/components/Socials';
 import UnderlineLink from '@/components/links/UnderlineLink';
 
 const Footer = () => {
   return (
     <>
-      <div className='w-full flex flex-col justify-center gap-12 text-white bg-black py-12 text-center'>
+      <div className='w-full flex flex-col justify-center gap-12 text-white bg-black py-12 text-center px-8'>
         <h1 className='text-8xl font-header'>DJ & PRODUCER DINOX</h1>
 
         <div className='flex gap-[16px] justify-center'>

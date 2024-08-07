@@ -55,10 +55,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className={`${bungee.variable} ${doppio.variable} font-primary`}>
+    <html className={`${bungee.variable} ${doppio.variable} font-primary text-white`}>
       <body>
         <NavBar />
-        {children}
+        <main>
+          <div className='relative flex min-h-screen flex-col items-center text-center'>
+            {children}
+          </div>
+        </main>
         <Footer />
       </body>
     </html>
