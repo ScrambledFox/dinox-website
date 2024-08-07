@@ -1,27 +1,25 @@
+import { Metadata } from "next"
+
 import AboutBlock from "@/components/AboutBlock";
 import Header from "@/components/Header";
 import Subheader from "@/components/Subheader";
-import { Metadata } from "next"
 
-import dinoxImage from '/public/images/dinox-crowd.jpg';
-import workingImage from '/public/images/working.png';
-import dinoxFrontImage from '/public/images/dinox-front.png';
-import flStudioImage from '/public/images/fl-studio.png';
-import djImage from '/public/images/dj.png';
-import studioImage from '/public/images/studio.png';
 import dinoxFarImage from '/public/images/dinox-far.jpg';
+import dinoxFrontImage from '/public/images/dinox-front.png';
+import djImage from '/public/images/dj.png';
 import famousImage from '/public/images/famous.jpg';
+import flStudioImage from '/public/images/fl-studio.png';
 import jamImage from '/public/images/jam.jpg';
+import studioImage from '/public/images/studio.png';
+import workingImage from '/public/images/working.png';
 
 export const metadata: Metadata = {
   title: 'About',
   description: 'Learn more about Dinox',
 };
 
-interface AboutPageProps {
-}
 
-export default function AboutPage({ }: AboutPageProps) {
+export default function AboutPage() {
   return (
     <main className="flex flex-col justify-center items-center">
       <div className="max-w-[1000px] mb-16">

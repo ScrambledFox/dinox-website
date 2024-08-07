@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
+
+import BookingForm from '@/components/BookingForm';
 import Header from '@/components/Header';
 import Subheader from '@/components/Subheader';
-import BookingForm from '@/components/BookingForm';
-import Image from 'next/image';
 
 import dinoxBackImage from '/public/images/dinox-back.png';
 
@@ -15,7 +16,7 @@ export default function BookingPage() {
   return (
     <main className='flex flex-col justify-center items-center'>
       <div className='max-w-[1000px]'>
-        <Header text="Supercharge your event" className={"mb-8"} />
+        <Header text="Supercharge your event" className="mb-8" />
         <Subheader className='mb-8 px-16'>Bring the raw energy of DINOX’ hardstyle and frenchcore beats to your event. Secure your booking now for an unforgettable night of electrifying music and non-stop dancing.</Subheader>
       </div>
 

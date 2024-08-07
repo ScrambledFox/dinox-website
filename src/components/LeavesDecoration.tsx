@@ -1,8 +1,8 @@
 
 "use client";
 
-import Image from 'next/image'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 import leavesImage from '/public/images/leaves.png'
 

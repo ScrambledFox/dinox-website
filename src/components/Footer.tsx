@@ -1,5 +1,5 @@
-import Socials from '@/components/Socials';
 import UnderlineLink from '@/components/links/UnderlineLink';
+import Socials from '@/components/Socials';
 
 const Footer = () => {
   return (

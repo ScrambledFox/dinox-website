@@ -1,9 +1,9 @@
 
 import Image from "next/image";
 
-import backgroundImage from '/public/images/background.jpg';
-
 import LeavesDecoration from "@/components/LeavesDecoration";
+
+import backgroundImage from '/public/images/background.jpg';
 
 export default function PageLayout({ children }: { children: React.ReactNode }) {
   return (

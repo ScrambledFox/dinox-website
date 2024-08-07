@@ -1,20 +1,18 @@
 "use client"
 
+
 import Header from "@/components/Header";
 import SocialBlock from "@/components/SocialBlock";
 import Socials from "@/components/Socials";
 import Subheader from "@/components/Subheader";
-import { Metadata } from "next";
 
 // export const metadata: Metadata = {
 //   title: 'Socials',
 //   description: 'Follow Dinox on social media',
 // };
 
-interface SocialsPageProps {
-}
 
-export default function SocialsPage({ }: SocialsPageProps) {
+export default function SocialsPage() {
   return (
     <main>
       <div className="max-w-[1000px] mb-16">

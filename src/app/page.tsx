@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 import Image from "next/image";
 import React from 'react';
 
+import Header from '@/components/Header';
 import ButtonLink from '@/components/links/ButtonLink';
 
 import backgroundImage from '/public/images/dinox-crowd.jpg';
-import Header from '@/components/Header';
 
 export default function HomePage() {
   return (

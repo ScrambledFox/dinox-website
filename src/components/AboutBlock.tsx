@@ -1,5 +1,6 @@
-import Header from "@/components/Header";
 import Image, { StaticImageData } from "next/image";
+
+import Header from "@/components/Header";
 
 
 interface AboutBlockProps {
@@ -14,7 +15,7 @@ export default function AboutBlock({ className = "", children, title, coverImage
   return (
     <div className={`${className} relative flex flex-col w-[100vw] border-t-8 border-white`}>
       <div className="relative h-[400px] flex flex-row justify-center items-center">
-        <Header text={title} className={"relative !text-4xl m-16 bg-black p-8 bg-opacity-50 rounded-3xl"} />
+        <Header text={title} className="relative !text-4xl m-16 bg-black p-8 bg-opacity-50 rounded-3xl" />
         <div className="-z-10">
           <Image src={coverImage} alt="background" quality={100} className='object-cover object-center' fill={true} />
         </div>
