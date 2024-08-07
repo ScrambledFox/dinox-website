@@ -16,6 +16,7 @@ export default function HomePage() {
           transition={{ duration: 1 }}
         >
           <Image
+            priority
             src='/images/dinox-crowd.jpg'
             alt='Dinox Crowd'
             layout='fill'
