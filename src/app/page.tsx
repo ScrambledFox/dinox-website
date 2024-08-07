@@ -23,6 +23,7 @@ export default function HomePage() {
           quality={100}
           className='-z-10 object-cover'
           fill={true}
+          priority
         />
       </motion.div>
 

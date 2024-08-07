@@ -15,6 +15,7 @@ export default function PageLayout({ children }: { children: React.ReactNode }) 
         quality={100}
         className='-z-10 object-cover object-top'
         fill={true}
+        priority
       />
       <main className='flex-grow relative bg-[2B3A2A] my-32 '>{children}</main>
     </>

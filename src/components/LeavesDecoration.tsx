@@ -19,6 +19,7 @@ export default function LeavesDecoration() {
         src={leavesImage}
         alt="leaves"
         className='absolute z-0 top-0 left-0 w-full blur-[4px]'
+        priority={true}
       />
     </motion.div>
   )
