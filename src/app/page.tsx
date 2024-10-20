@@ -29,7 +29,7 @@ export default function HomePage() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 2 }}
+        transition={{ duration: 1, delay: 1.1 }}
         className='w-full h-screen bg-black/50 flex flex-col justify-center'
       >
         <div className='flex flex-row justify-center md:justify-start md:ml-16'>

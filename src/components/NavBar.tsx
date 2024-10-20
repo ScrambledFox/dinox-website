@@ -76,7 +76,7 @@ const NavBar = () => {
 
             {/* Logo */}
             <div className='flex-shrink-0'>
-              <Link href='/'>
+              <Link href='/' onClick={() => setIsMenuOpen(false)}>
                 <Image
                   src='/images/logo-text.png'
                   alt='logo'

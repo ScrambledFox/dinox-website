@@ -1,8 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { default: dynamic } = require('next/dynamic');
-// dynamic import of remark-html
-const RemarkHTML = dynamic('remark-html');
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
@@ -56,7 +51,7 @@ const nextConfig = {
           loader: 'remark-loader',
           options: {
             remarkOptions: {
-              plugins: [RemarkHTML],
+              // plugins: [RemarkHTML],
             },
           },
         },
