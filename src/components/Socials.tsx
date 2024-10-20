@@ -26,6 +26,7 @@ const SocialIcon = ({ src, icon, ...props }: SocialIconProps) => {
     <a
       href={src}
       className='bg-white p-2 rounded-md hover:scale-110 transition-all duration-150'
+      target='_blank'
     >
       {icon === 'instagram' && (
         <ImInstagram size={props.size} color={props.colour} />
