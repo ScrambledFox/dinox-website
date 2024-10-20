@@ -58,8 +58,8 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
           [
             size === 'base' && ['px-3 py-1.5', 'text-sm md:text-base'],
             size === 'sm' && ['px-2 py-1', 'text-xs md:text-sm'],
-            size === 'xl' && ['px-4 py-2', 'text-lg md:text-xl'],
-            size === '4xl' && ['px-6 py-3', 'text-2xl md:text-2xl'],
+            size === 'xl' && ['px-4 py-2', 'md:text-xl'],
+            size === '4xl' && ['px-6 py-3', 'md:text-2xl'],
           ],
           //#endregion  //*======== Size ===========
           //#region  //*=========== Variants ===========

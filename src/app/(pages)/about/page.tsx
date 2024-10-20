@@ -1,8 +1,8 @@
-import { Metadata } from "next"
+import { Metadata } from 'next';
 
-import AboutBlock from "@/components/AboutBlock";
-import Header from "@/components/Header";
-import Subheader from "@/components/Subheader";
+import AboutBlock from '@/components/AboutBlock';
+import Header from '@/components/Header';
+import Subheader from '@/components/Subheader';
 
 import dinoxFarImage from '/public/images/dinox-far.jpg';
 import dinoxFrontImage from '/public/images/dinox-front.png';
@@ -18,58 +18,86 @@ export const metadata: Metadata = {
   description: 'Learn more about Dinox',
 };
 
-
 export default function AboutPage() {
   return (
-    <main className="flex flex-col justify-center items-center">
-      <div className="max-w-[1000px] mb-16">
-        <Header text="Want to know more about dinox?" className="mb-12" />
-        <Subheader>Step into his timeline and meet the person behind Dinox.</Subheader>
+    <main className='flex flex-col justify-center items-center'>
+      <div className='max-w-[1000px] mb-16 mx-2'>
+        <Header text='Want to know more about dinox?' className='mb-12' />
+        <Subheader>
+          Step into his timeline and meet the person behind Dinox.
+        </Subheader>
       </div>
 
-      <div>
-        <AboutBlock title="BIO" coverImage={workingImage} textImage={dinoxFrontImage} className="text-lg">
+      <div className='md:text-lg'>
+        <AboutBlock
+          title='BIO'
+          coverImage={workingImage}
+          textImage={dinoxFrontImage}
+        >
           <p>
-            At 27 years old, DJ/Producer Dinox is a force to be reckoned with in the Harderstyle music scene. A lifelong fan of rapid fast BPM, Dinox discovered the electrifying energy of high-tempo beats at a young age and has been hooked ever since.
+            At 27 years old, DJ/Producer Dinox is a force to be reckoned with in
+            the Harderstyle music scene. A lifelong fan of rapid fast BPM, Dinox
+            discovered the electrifying energy of high-tempo beats at a young
+            age and has been hooked ever since.
           </p>
           <br />
           <p>
-            With a mission to spread positive energy through music and performance, Dinox creates an unforgettable experience for every audience. Known for his dynamic sets and infectious enthusiasm, DJ Dinox combines passion with skill to deliver high-energy performances that leave crowds buzzing. Whether it's at a packed nightclub, a massive festival, or an intimate party, Dinox brings a unique blend of Harderstyle tracks that keep the dance floor alive.
+            With a mission to spread positive energy through music and
+            performance, Dinox creates an unforgettable experience for every
+            audience. Known for his dynamic sets and infectious enthusiasm, DJ
+            Dinox combines passion with skill to deliver high-energy
+            performances that leave crowds buzzing. Whether it's at a packed
+            nightclub, a massive festival, or an intimate party, Dinox brings a
+            unique blend of Harderstyle tracks that keep the dance floor alive.
           </p>
           <br />
           <p>
-            Join Dinox on a musical journey where the beats are fast, the energy is high, and the vibes are always positive. Let the music move you and feel the rush that has captivated Dinox since childhood.
+            Join Dinox on a musical journey where the beats are fast, the energy
+            is high, and the vibes are always positive. Let the music move you
+            and feel the rush that has captivated Dinox since childhood.
           </p>
         </AboutBlock>
 
-        <AboutBlock title="PRODUCER" coverImage={flStudioImage} textImage={dinoxFarImage} className="text-lg">
+        <AboutBlock
+          title='PRODUCER'
+          coverImage={flStudioImage}
+          textImage={dinoxFarImage}
+        >
           <p>
-            As a producer, Dinox Started crafting his own tracks since he was 18, specializing in hardstyle, hardcore, frenchcore, and rawstyle music.
+            As a producer, Dinox Started crafting his own tracks since he was
+            18, specializing in hardstyle, hardcore, frenchcore, and rawstyle
+            music.
           </p>
           <br />
           <p>
-            His goal is to infuse his tracks with emotion, creating a listening experience that makes the listener feel empowered and ready to conquer the world, generating positive energy and uplifting their spirits.
+            His goal is to infuse his tracks with emotion, creating a listening
+            experience that makes the listener feel empowered and ready to
+            conquer the world, generating positive energy and uplifting their
+            spirits.
           </p>
           <br />
           <p>
-            Lots of inspiration comes from the harderstyle scene, other music genres and fellow artists ideas. Getting his inspiration from different types of music genres, Dinox produced tracks like ‘don’t stop running’ and ‘Multiverse’. By fusing different types of music genres into one idea, he creates a whole new level of sound for the harderstyle scene.
+            Lots of inspiration comes from the harderstyle scene, other music
+            genres and fellow artists ideas. Getting his inspiration from
+            different types of music genres, Dinox produced tracks like ‘don’t
+            stop running’ and ‘Multiverse’. By fusing different types of music
+            genres into one idea, he creates a whole new level of sound for the
+            harderstyle scene.
           </p>
         </AboutBlock>
 
-        <AboutBlock title="DJ" coverImage={djImage} textImage={famousImage} className="text-lg">
-          <p>
-            DJ Samenvatting
-          </p>
+        <AboutBlock title='DJ' coverImage={djImage} textImage={famousImage}>
+          <p>DJ Samenvatting</p>
         </AboutBlock>
 
-        <AboutBlock title="DINOX PREVIEW" coverImage={studioImage} textImage={jamImage} className="text-lg">
-          <p>
-            Dinox Preview
-          </p>
+        <AboutBlock
+          title='DINOX PREVIEW'
+          coverImage={studioImage}
+          textImage={jamImage}
+        >
+          <p>Dinox Preview</p>
         </AboutBlock>
-
       </div>
-
-    </main >
+    </main>
   );
 }

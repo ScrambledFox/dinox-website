@@ -1,17 +1,16 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from "next/image";
+import Image from 'next/image';
 import React from 'react';
 
-import Header from '@/components/Header';
 import ButtonLink from '@/components/links/ButtonLink';
 
 import backgroundImage from '/public/images/dinox-crowd.jpg';
 
 export default function HomePage() {
   return (
-    <main>
+    <main className='relative flex min-h-screen flex-col items-center'>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -31,34 +30,38 @@ export default function HomePage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 2 }}
-        className='absolute top-0 left-0 w-full min-h-screen bg-black/50 flex flex-col justify-center '
+        className='w-full h-screen bg-black/50 flex flex-col justify-center'
       >
-        <div className='flex flex-col gap-9 w-[60%] max-w-[1000px] mx-32 text-justify'>
-          <Header text='Unleash the beats' className='!text-6xl' />
-          <p className='text-2xl text-white'>
-            Dive into the heart-pounding beats of DINOX. Known for
-            electrifying hardstyle and relentless frenchcore, DINOX delivers
-            intense, high-energy performances that will keep you moving all
-            night long. Don’t miss out on the raw power and adrenaline of the
-            underground sound.
-          </p>
-          <div className='flex flex-row justify-start gap-12'>
-            <ButtonLink
-              href='/about'
-              size='4xl'
-              variant='black'
-              className='uppercase px-8 py-4'
-            >
-              Learn more
-            </ButtonLink>
-            <ButtonLink
-              href='/booking'
-              size='4xl'
-              variant='light'
-              className='uppercase px-8 py-4'
-            >
-              Book now
-            </ButtonLink>
+        <div className='flex flex-row justify-center md:justify-start md:ml-16'>
+          <div className='flex flex-col gap-9 w-[80%] items-center pt-32 md:w-[40%]'>
+            <h1 className='text-2xl md:text-6xl font-header text-white uppercase'>
+              Unleash the beats
+            </h1>
+            <p className='text-sm md:text-xl text-white text-justify'>
+              Dive into the heart-pounding beats of DINOX. Known for
+              electrifying hardstyle and relentless frenchcore, DINOX delivers
+              intense, high-energy performances that will keep you moving all
+              night long. Don’t miss out on the raw power and adrenaline of the
+              underground sound.
+            </p>
+            <div className='flex flex-row gap-2 justify-evenly text-center'>
+              <ButtonLink
+                href='/about'
+                variant='black'
+                className='uppercase'
+                size='4xl'
+              >
+                Learn more
+              </ButtonLink>
+              <ButtonLink
+                href='/booking'
+                variant='light'
+                className='uppercase'
+                size='4xl'
+              >
+                Book now
+              </ButtonLink>
+            </div>
           </div>
         </div>
       </motion.div>

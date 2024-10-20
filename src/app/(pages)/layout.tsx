@@ -1,23 +1,26 @@
+import Image from 'next/image';
 
-import Image from "next/image";
-
-import LeavesDecoration from "@/components/LeavesDecoration";
+import LeavesDecoration from '@/components/LeavesDecoration';
 
 import backgroundImage from '/public/images/background.jpg';
 
-export default function PageLayout({ children }: { children: React.ReactNode }) {
+export default function PageLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <>
       <LeavesDecoration />
       <Image
         src={backgroundImage}
-        alt="background"
+        alt='background'
         quality={100}
-        className='-z-10 object-cover object-top'
-        fill={true}
+        className='-z-10 w-full h-full object-cover object-top'
+        fill
         priority
       />
-      <main className='flex-grow relative bg-[2B3A2A] my-32 '>{children}</main>
+      <div className='flex-grow relative pt-32'>{children}</div>
     </>
   );
 }

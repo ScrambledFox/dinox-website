@@ -1,13 +1,11 @@
+'use client';
 
-"use client";
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
-import { motion } from 'framer-motion'
-import Image from 'next/image'
-
-import leavesImage from '/public/images/leaves.png'
+import leavesImage from '/public/images/leaves.png';
 
 export default function LeavesDecoration() {
-
   return (
     <motion.div
       initial={{ y: -100, opacity: 0 }}
@@ -17,11 +15,10 @@ export default function LeavesDecoration() {
     >
       <Image
         src={leavesImage}
-        alt="leaves"
+        alt='leaves'
         className='absolute z-0 top-0 left-0 w-full blur-[4px]'
         priority={true}
       />
     </motion.div>
-  )
-
+  );
 }

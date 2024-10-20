@@ -1,4 +1,3 @@
-
 interface SubheaderProps {
   children: React.ReactNode;
   className?: string;
@@ -6,6 +5,10 @@ interface SubheaderProps {
 
 export default function Subheader({ children, className }: SubheaderProps) {
   return (
-    <h2 className={`text-2xl font-primary font-thin text-white ${className}`}>{children}</h2>
-  )
+    <h2
+      className={`text-sm md:text-2xl font-primary font-thin text-white ${className}`}
+    >
+      {children}
+    </h2>
+  );
 }

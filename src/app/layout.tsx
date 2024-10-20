@@ -3,11 +3,13 @@ import * as React from 'react';
 
 import '@/styles/globals.css';
 
+import CookieConsent from '@/components/CookieConsent';
 import Footer from '@/components/Footer';
 import NavBar from '@/components/NavBar';
 
 import { bungee, doppio } from '@/app/fonts';
 import { siteConfig } from '@/constant/config';
+import CookieConsentProvider from '@/contexts/CookieConsentContext';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -55,16 +57,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className={`${bungee.variable} ${doppio.variable} font-primary text-white`}>
-      <body>
-        <NavBar />
-        <main>
-          <div className='relative flex min-h-screen flex-col items-center text-center'>
+    <CookieConsentProvider>
+      <html
+        className={`${bungee.variable} ${doppio.variable} font-primary text-white`}
+      >
+        <body>
+          <NavBar />
+          <main className='relative flex min-h-screen flex-col items-center text-center'>
             {children}
-          </div>
-        </main>
-        <Footer />
-      </body>
-    </html>
+          </main>
+          <CookieConsent />
+          <Footer />
+        </body>
+      </html>
+    </CookieConsentProvider>
   );
 }

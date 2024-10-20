@@ -1,11 +1,23 @@
+'use client';
+
 import UnderlineLink from '@/components/links/UnderlineLink';
 import Socials from '@/components/Socials';
 
+import { useCookieBanner } from '@/contexts/CookieConsentContext';
+
 const Footer = () => {
+  const { openBanner } = useCookieBanner();
+
+  const handleCookieButtonClick = () => {
+    openBanner();
+  };
+
   return (
     <>
-      <div className='w-full flex flex-col justify-center gap-12 text-white bg-black py-12 text-center px-8'>
-        <h1 className='text-8xl font-header'>DJ & PRODUCER DINOX</h1>
+      <div className='w-full flex flex-col justify-center gap-12 text-white bg-black py-12 text-center'>
+        <h1 className='text-2xl md:text-8xl font-header'>
+          DJ & PRODUCER DINOX
+        </h1>
 
         <div className='flex gap-[16px] justify-center'>
           <Socials />
@@ -22,14 +34,16 @@ const Footer = () => {
             </UnderlineLink>
           </p>
           <div className=''>
-            <UnderlineLink href='#'>Privacy Policy</UnderlineLink>
+            <UnderlineLink href='/privacy'>Privacy Policy</UnderlineLink>
             {' | '}
-            <UnderlineLink href='#'>Terms of Service</UnderlineLink>
+            <UnderlineLink href='/privacy'>Terms of Service</UnderlineLink>
             {' | '}
-            <UnderlineLink href='#'>Cookies Policy</UnderlineLink>
+            <UnderlineLink href='/privacy'>Cookies Policy</UnderlineLink>
           </div>
           <p>
-            <UnderlineLink href='#'>Cookies Settings</UnderlineLink>
+            <UnderlineLink href='#cookies' onClick={handleCookieButtonClick}>
+              Cookies Settings
+            </UnderlineLink>
           </p>
         </div>
       </div>
