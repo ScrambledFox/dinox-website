@@ -16,7 +16,7 @@ export default function PageLayout({
         src={backgroundImage}
         alt='background'
         quality={100}
-        className='-z-10 w-full h-full object-cover object-top'
+        className='!fixed -z-10 w-full h-full object-cover object-top'
         fill
         priority
       />
