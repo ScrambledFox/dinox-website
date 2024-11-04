@@ -19,7 +19,7 @@ export default function AboutBlock({
 }: AboutBlockProps) {
   return (
     <div
-      className={`${className} relative flex flex-col w-[100vw] border-t-8 border-white`}
+      className={`${className} relative flex flex-col border-t-8 border-white`}
     >
       <div className='relative h-[400px] flex flex-row justify-center items-center'>
         <Header

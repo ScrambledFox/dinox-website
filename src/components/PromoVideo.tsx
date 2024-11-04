@@ -20,7 +20,7 @@ export default function PromoVideo() {
       <video
         ref={ref}
         id='promo-video'
-        autoPlay={true}
+        autoPlay={false}
         muted={false}
         controls={true}
       >
