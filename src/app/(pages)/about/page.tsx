@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 
 import AboutBlock from '@/components/AboutBlock';
 import Header from '@/components/Header';
+import PromoVideo from '@/components/PromoVideo';
 import SpotifyEmbed from '@/components/Spotify';
 import Subheader from '@/components/Subheader';
 import UnopinionatedAboutBlock from '@/components/UnopinionatedAboutBlock';
@@ -11,7 +11,6 @@ import dinoxFrontImage from '/public/images/dinox-front.png';
 import djImage from '/public/images/dj.png';
 import famousImage from '/public/images/famous.jpg';
 import flStudioImage from '/public/images/fl-studio.png';
-import jamImage from '/public/images/jam.jpg';
 import studioImage from '/public/images/studio.png';
 import workingImage from '/public/images/working.png';
 
@@ -116,7 +115,7 @@ export default function AboutPage() {
         <UnopinionatedAboutBlock
           title='DINOX PREVIEW'
           coverImage={studioImage}
-          sideElement={<Image src={jamImage} alt='jammin' />}
+          sideElement={<PromoVideo />}
         >
           <h1 className='text-center'>WHAT YOU SEE IS WHAT YOU GET</h1>
         </UnopinionatedAboutBlock>

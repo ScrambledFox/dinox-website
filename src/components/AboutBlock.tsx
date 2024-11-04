@@ -37,19 +37,16 @@ export default function AboutBlock({
         </div>
       </div>
 
-      <div className='md:relative text-justify flex flex-col md:flex-row w-full justify-center align-bottom gap-4 px-16 py-8 items-center bg-black'>
+      <div className='md:relative text-justify flex flex-col md:flex-row w-full justify-center align-bottom gap-16 p-8 md:p-[64px] items-center bg-black'>
         <div className='flex-1 md:p-[64px]'>{children}</div>
         <div className='md:flex-1'>
           <Image
             src={textImage}
             alt='background'
             quality={100}
-            className='object-cover rounded-[50px]'
+            className='object-cover rounded-2xl'
           />
         </div>
-        {/* <div className="md:relative md:flex-1 md:my-8 md:h-[600px]"> */}
-        {/* <Image src={textImage} alt="background" quality={100} className='object-cover rounded-[50px]' fill={true} /> */}
-        {/* </div> */}
       </div>
     </div>
   );

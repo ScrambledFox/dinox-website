@@ -14,12 +14,12 @@ const Footer = () => {
 
   return (
     <>
-      <div className='w-full flex flex-col justify-center gap-12 text-white bg-black py-12 text-center'>
+      <div className='w-full p-2 flex flex-col justify-center gap-12 text-white bg-black py-12 text-center'>
         <h1 className='text-2xl md:text-8xl font-header'>
           DJ & PRODUCER DINOX
         </h1>
 
-        <div className='flex gap-[16px] justify-center'>
+        <div className='flex gap-2 md:gap-[16px] justify-center'>
           <Socials />
         </div>
 

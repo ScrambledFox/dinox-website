@@ -12,7 +12,7 @@ import Subheader from '@/components/Subheader';
 
 export default function SocialsPage() {
   return (
-    <div className='flex flex-col justify-center items-center'>
+    <div className='flex flex-col justify-center items-center mb-16'>
       <div className='container mb-16 px-2'>
         <Header text='Stay up-to-date' className='mb-4' />
         <Header text='follow dinox' className='mb-12' />
@@ -22,12 +22,12 @@ export default function SocialsPage() {
         </Subheader>
       </div>
 
-      <div className='px-8 w-full md:w-[50%]'>
+      <div className='px-4 w-full md:w-[50%]'>
         <div className='flex flex-row justify-between mb-12'>
           <Socials />
         </div>
 
-        <div className='flex flex-col gap-12 mx-4'>
+        <div className='flex flex-col mx-4'>
           <div className='relative left-0 w-full h-[152px]'>
             <SpotifyEmbed />
           </div>

@@ -38,8 +38,8 @@ export default function UnopinionatedAboutBlock({
         </div>
       </div>
 
-      <div className='md:relative text-justify flex flex-col md:flex-row w-full justify-center align-bottom gap-4 px-16 py-8 items-center bg-black'>
-        <div className='flex-1 md:p-[64px]'>{children}</div>
+      <div className='md:relative text-justify flex flex-col md:flex-row w-full justify-center align-bottom gap-16 p-4 md:p-[64px] items-center bg-black'>
+        <div className='flex-1'>{children}</div>
         <div className='md:flex-1 w-full'>{sideElement}</div>
       </div>
     </div>
