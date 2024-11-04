@@ -1,10 +1,12 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 
 import AboutBlock from '@/components/AboutBlock';
 import Header from '@/components/Header';
+import SpotifyEmbed from '@/components/Spotify';
 import Subheader from '@/components/Subheader';
+import UnopinionatedAboutBlock from '@/components/UnopinionatedAboutBlock';
 
-import dinoxFarImage from '/public/images/dinox-far.jpg';
 import dinoxFrontImage from '/public/images/dinox-front.png';
 import djImage from '/public/images/dj.png';
 import famousImage from '/public/images/famous.jpg';
@@ -58,10 +60,10 @@ export default function AboutPage() {
           </p>
         </AboutBlock>
 
-        <AboutBlock
+        <UnopinionatedAboutBlock
           title='PRODUCER'
           coverImage={flStudioImage}
-          textImage={dinoxFarImage}
+          sideElement={<SpotifyEmbed />}
         >
           <p>
             As a producer, Dinox Started crafting his own tracks since he was
@@ -84,19 +86,40 @@ export default function AboutPage() {
             genres into one idea, he creates a whole new level of sound for the
             harderstyle scene.
           </p>
-        </AboutBlock>
+        </UnopinionatedAboutBlock>
 
         <AboutBlock title='DJ' coverImage={djImage} textImage={famousImage}>
-          <p>DJ Samenvatting</p>
+          <p>
+            Dinox is known for his powerful, atmospheric sets, packed with
+            intense kicks and melodic tracks that stay in your head long after
+            the music fades. With a keen ear and sharp attention to detail,
+            Dinox carefully selects tracks that not only stirs the crowd, but
+            also perfectly match the vibe of the event.
+          </p>
+          <br />
+          <p>
+            Specializing in Frenchcore, Hardcore, Hardstyle, and Rawstyle, he
+            consistently captivates his audience with unforgettable moments. New
+            sets are regularly uploaded to SoundCloud, giving fans a taste of
+            his distinctive style.
+          </p>
+          <br />
+          <p>
+            Having performed at events like ‘RandRock’ and the ‘Twenterand Run’
+            festival, Dinox has proven he knows how to elevate a crowd and take
+            any festival to the next level. Add Dinox to your lineup and prepare
+            for an explosive experience that will make the day truly
+            unforgettable!
+          </p>
         </AboutBlock>
 
-        <AboutBlock
+        <UnopinionatedAboutBlock
           title='DINOX PREVIEW'
           coverImage={studioImage}
-          textImage={jamImage}
+          sideElement={<Image src={jamImage} alt='jammin' />}
         >
-          <p>Dinox Preview</p>
-        </AboutBlock>
+          <h1 className='text-center'>WHAT YOU SEE IS WHAT YOU GET</h1>
+        </UnopinionatedAboutBlock>
       </div>
     </main>
   );

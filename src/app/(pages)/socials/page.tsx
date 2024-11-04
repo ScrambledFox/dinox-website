@@ -2,6 +2,7 @@
 
 import Header from '@/components/Header';
 import Socials from '@/components/Socials';
+import SpotifyEmbed from '@/components/Spotify';
 import Subheader from '@/components/Subheader';
 
 // export const metadata: Metadata = {
@@ -28,12 +29,7 @@ export default function SocialsPage() {
 
         <div className='flex flex-col gap-12 mx-4'>
           <div className='relative left-0 w-full h-[152px]'>
-            <iframe
-              src='https://open.spotify.com/embed/artist/0EtonsnDHhrEeh0UFjA7s0?utm_source=oembed'
-              className='top-0 left-0 w-full h-full absolute border-0'
-              allowFullScreen
-              allow='clipboard-write; encrypted-media; fullscreen; picture-in-picture;'
-            ></iframe>
+            <SpotifyEmbed />
           </div>
         </div>
       </div>
