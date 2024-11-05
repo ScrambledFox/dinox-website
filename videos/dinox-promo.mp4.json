@@ -1,0 +1,21 @@
+{
+  "status": "ready",
+  "originalFilePath": "videos\\dinox-promo.mp4",
+  "provider": "vercel-blob",
+  "providerMetadata": {
+    "vercel-blob": {
+      "key": "videos\\dinox-promo.mp4",
+      "url": "https://bkpvl280bbkyjsre.public.blob.vercel-storage.com/videos/dinox-promo-VQQwCnY99lfv7iiZcOFRrnpCoFl8DW.mp4",
+      "contentType": "video/mp4"
+    }
+  },
+  "createdAt": 1730812485988,
+  "updatedAt": 1730812496236,
+  "size": 131930067,
+  "sources": [
+    {
+      "src": "https://bkpvl280bbkyjsre.public.blob.vercel-storage.com/videos/dinox-promo-VQQwCnY99lfv7iiZcOFRrnpCoFl8DW.mp4",
+      "type": "video/mp4"
+    }
+  ]
+}
