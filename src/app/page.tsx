@@ -10,7 +10,7 @@ import backgroundImage from '/public/images/dinox-crowd.jpg';
 
 export default function HomePage() {
   return (
-    <main className='relative flex min-h-screen flex-col items-center w-svw'>
+    <main className='relative flex min-h-screen flex-col items-center w-full'>
       {/* Background, fade-in */}
       <motion.div
         initial={{ opacity: 0 }}
