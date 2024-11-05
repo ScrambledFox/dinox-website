@@ -1,23 +1,21 @@
 {
   "status": "ready",
   "originalFilePath": "videos\\dinox-promo.mp4",
-  "provider": "mux",
+  "provider": "vercel-blob",
   "providerMetadata": {
-    "mux": {
-      "uploadId": "EU9Mz7WxbdnToChddVsa5wjo004502w6k9a52Imn5g2T4",
-      "assetId": "NWVmMnahuCRed71k6JUms31A01c6rKefimvv3evnzV00s",
-      "playbackId": "6WLitFaLJd2omLtr52bcOylKSUVDcrg4ZBXDfXPHNeQ"
+    "vercel-blob": {
+      "key": "videos\\dinox-promo.mp4",
+      "url": "https://bkpvl280bbkyjsre.public.blob.vercel-storage.com/videos/dinox-promo-VQQwCnY99lfv7iiZcOFRrnpCoFl8DW.mp4",
+      "contentType": "video/mp4"
     }
   },
-  "createdAt": 1730808330229,
-  "updatedAt": 1730808388044,
+  "createdAt": 1730812485988,
+  "updatedAt": 1730812496236,
   "size": 131930067,
   "sources": [
     {
-      "src": "https://stream.mux.com/6WLitFaLJd2omLtr52bcOylKSUVDcrg4ZBXDfXPHNeQ.m3u8",
-      "type": "application/x-mpegURL"
+      "src": "https://bkpvl280bbkyjsre.public.blob.vercel-storage.com/videos/dinox-promo-VQQwCnY99lfv7iiZcOFRrnpCoFl8DW.mp4",
+      "type": "video/mp4"
     }
-  ],
-  "poster": "https://image.mux.com/6WLitFaLJd2omLtr52bcOylKSUVDcrg4ZBXDfXPHNeQ/thumbnail.webp",
-  "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAABQAgCdASoJABAAAQAcJZwAdoARDxV91CzJDAAA/v0p8reR1sW76DuHD8886vhqkqtX0M0vvbX5Vp0QfliF5mI6MzVsENf3A98EkDdf+cgsJfL/dkTcfOkDxps/jtt9YzDjJuTnb14UKqOLItr+qy6v0i7bf45z2T+e/Zdg/zfc51k8AAA="
+  ]
 }
