@@ -19,12 +19,15 @@ export default function PromoVideo() {
     <div>
       <video
         ref={ref}
-        id='promo-video'
         autoPlay={false}
         muted={false}
         controls={true}
+        loop={true}
       >
-        <source src='/videos/dinox-promo.mp4' type='video/mp4' />
+        <source
+          src='https://bkpvl280bbkyjsre.public.blob.vercel-storage.com/dinox-promo-azDIAnT87op5FThQu8yaKWuVrD9wyR.mp4'
+          type='video/mp4'
+        />
       </video>
     </div>
   );
