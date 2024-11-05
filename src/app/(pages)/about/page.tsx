@@ -7,6 +7,8 @@ import SpotifyEmbed from '@/components/Spotify';
 import Subheader from '@/components/Subheader';
 import UnopinionatedAboutBlock from '@/components/UnopinionatedAboutBlock';
 
+import useAge from '@/utils/useAge';
+
 import dinoxFrontImage from '/public/images/dinox-front.png';
 import djImage from '/public/images/dj.png';
 import famousImage from '/public/images/famous.jpg';
@@ -20,6 +22,8 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+  const dinoxAge = useAge(new Date('1997-09-28'));
+
   return (
     <main className='flex flex-col justify-center items-center'>
       <div className='max-w-[1000px] mb-16 mx-2'>
@@ -37,10 +41,10 @@ export default function AboutPage() {
           priority
         >
           <p>
-            At 27 years old, DJ/Producer Dinox is a force to be reckoned with in
-            the Harderstyle music scene. A lifelong fan of rapid fast BPM, Dinox
-            discovered the electrifying energy of high-tempo beats at a young
-            age and has been hooked ever since.
+            At {dinoxAge} years old, DJ/Producer Dinox is a force to be reckoned
+            with in the Harderstyle music scene. A lifelong fan of rapid fast
+            BPM, Dinox discovered the electrifying energy of high-tempo beats at
+            a young age and has been hooked ever since.
           </p>
           <br />
           <p>
