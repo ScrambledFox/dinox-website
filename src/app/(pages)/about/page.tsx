@@ -34,6 +34,7 @@ export default function AboutPage() {
           title='BIO'
           coverImage={workingImage}
           textImage={dinoxFrontImage}
+          priority
         >
           <p>
             At 27 years old, DJ/Producer Dinox is a force to be reckoned with in

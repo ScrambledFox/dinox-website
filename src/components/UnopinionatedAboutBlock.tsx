@@ -22,10 +22,11 @@ export default function UnopinionatedAboutBlock({
     <div
       className={`${className} relative flex flex-col border-t-8 border-white`}
     >
+      {/* Headers */}
       <div className='relative h-[400px] flex flex-row justify-center items-center'>
         <Header
           text={title}
-          className='relative !text-4xl m-16 bg-black p-8 bg-opacity-50 rounded-3xl'
+          className='relative !text-4xl bg-black p-8 bg-opacity-50 rounded-3xl'
         />
         <div className='-z-10'>
           <Image
@@ -38,7 +39,8 @@ export default function UnopinionatedAboutBlock({
         </div>
       </div>
 
-      <div className='md:relative text-justify flex flex-col md:flex-row w-full justify-center align-bottom gap-16 p-4 md:p-[64px] items-center bg-black'>
+      {/* Body block */}
+      <div className='md:relative text-justify flex flex-col md:flex-row w-full justify-center align-bottom gap-8 md:gap-32 p-8 md:p-[128px] items-center bg-black'>
         <div className='flex-1'>{children}</div>
         <div className='md:flex-1 w-full'>{sideElement}</div>
       </div>
