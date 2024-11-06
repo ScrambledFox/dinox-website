@@ -1,17 +1,18 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 
 import AboutBlock from '@/components/AboutBlock';
 import Header from '@/components/Header';
+import PromoVideo from '@/components/PromoVideo';
 import SpotifyEmbed from '@/components/Spotify';
 import Subheader from '@/components/Subheader';
 import UnopinionatedAboutBlock from '@/components/UnopinionatedAboutBlock';
+
+import useAge from '@/utils/useAge';
 
 import dinoxFrontImage from '/public/images/dinox-front.png';
 import djImage from '/public/images/dj.png';
 import famousImage from '/public/images/famous.jpg';
 import flStudioImage from '/public/images/fl-studio.png';
-import jamImage from '/public/images/jam.jpg';
 import studioImage from '/public/images/studio.png';
 import workingImage from '/public/images/working.png';
 
@@ -21,6 +22,8 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+  const dinoxAge = useAge(new Date('1997-09-28'));
+
   return (
     <main className='flex flex-col justify-center items-center'>
       <div className='max-w-[1000px] mb-16 mx-2'>
@@ -35,12 +38,13 @@ export default function AboutPage() {
           title='BIO'
           coverImage={workingImage}
           textImage={dinoxFrontImage}
+          priority
         >
           <p>
-            At 27 years old, DJ/Producer Dinox is a force to be reckoned with in
-            the Harderstyle music scene. A lifelong fan of rapid fast BPM, Dinox
-            discovered the electrifying energy of high-tempo beats at a young
-            age and has been hooked ever since.
+            At {dinoxAge} years old, DJ/Producer Dinox is a force to be reckoned
+            with in the Harderstyle music scene. A lifelong fan of rapid fast
+            BPM, Dinox discovered the electrifying energy of high-tempo beats at
+            a young age and has been hooked ever since.
           </p>
           <br />
           <p>
@@ -116,7 +120,7 @@ export default function AboutPage() {
         <UnopinionatedAboutBlock
           title='DINOX PREVIEW'
           coverImage={studioImage}
-          sideElement={<Image src={jamImage} alt='jammin' />}
+          sideElement={<PromoVideo />}
         >
           <h1 className='text-center'>WHAT YOU SEE IS WHAT YOU GET</h1>
         </UnopinionatedAboutBlock>

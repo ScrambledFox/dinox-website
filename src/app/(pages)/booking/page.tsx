@@ -20,7 +20,7 @@ export default function BookingPage() {
     >
       <div className='max-w-[1000px]'>
         <Header text='Supercharge your event' className='mb-8' />
-        <Subheader className='mb-8 px-16 text-justify'>
+        <Subheader className='mb-8 px-16'>
           Bring the raw energy of DINOX’ hardstyle and frenchcore beats to your
           event. Secure your booking now for an unforgettable night of
           electrifying music and non-stop dancing.
