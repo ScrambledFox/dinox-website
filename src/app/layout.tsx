@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
 import * as React from 'react';
 
@@ -66,7 +67,10 @@ export default function RootLayout({
           <main className='relative flex min-h-screen flex-col items-center text-center'>
             {children}
           </main>
+
           <CookieConsent />
+          <Analytics />
+
           <Footer />
         </body>
       </html>
