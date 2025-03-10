@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 
 import BookingForm from '@/components/BookingForm';
 import Header from '@/components/Header';
 import Subheader from '@/components/Subheader';
+import Image from 'next/image';
 
 import dinoxBackImage from '/public/images/dinox-back.png';
 
@@ -32,9 +32,7 @@ export default function BookingPage() {
           <BookingForm />
         </div>
         <div className='flex-1 justify-center items-center'>
-          <div>
-            <Image src={dinoxBackImage} alt='Dinox Back' quality={100} />
-          </div>
+          <Image src={dinoxBackImage} alt='Dinox Back' quality={100} priority />
         </div>
       </div>
     </main>
