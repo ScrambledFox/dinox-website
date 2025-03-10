@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
 
+import LogoImage from '/public/images/logo-text.png';
+
 // Data object with link text and href
 interface LinkProps {
   text: string;
@@ -75,13 +77,14 @@ const NavBar = () => {
             </div>
 
             {/* Logo */}
-            <div className='flex-shrink-0'>
+            <div>
               <Link href='/' onClick={() => setIsMenuOpen(false)}>
                 <Image
-                  src='/images/logo-text.png'
+                  src={LogoImage}
                   alt='logo'
                   width={200}
                   height={200}
+                  priority
                 />
               </Link>
             </div>
