@@ -69,7 +69,7 @@ const Socials = () => {
       />
       <SocialIcon
         icon='youtube'
-        src='https://www.youtube.com/@DJDinox2'
+        src='https://www.youtube.com/@OfficialDJDinox'
         alt='Youtube'
         colour='black'
         size={24}
