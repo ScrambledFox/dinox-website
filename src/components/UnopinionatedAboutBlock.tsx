@@ -34,6 +34,8 @@ export default function UnopinionatedAboutBlock({
             alt='background'
             quality={100}
             className='object-cover object-center'
+            priority
+            placeholder='blur'
             fill={true}
           />
         </div>
