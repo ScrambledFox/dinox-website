@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 
 import BookingForm from '@/components/BookingForm';
 import Header from '@/components/Header';
 import Subheader from '@/components/Subheader';
-import Image from 'next/image';
 
 import dinoxBackImage from '/public/images/dinox-back.png';
 

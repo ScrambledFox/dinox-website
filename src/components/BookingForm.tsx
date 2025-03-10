@@ -1,8 +1,8 @@
-"use client";
-
-import TextButton from '@/components/buttons/TextButton';
+'use client';
 
 import { useForm } from 'react-hook-form';
+
+import TextButton from '@/components/buttons/TextButton';
 
 interface BookingFormProps {
   className?: string;
@@ -26,10 +26,14 @@ type FormInputs = {
   venueCity: string;
   venueCountry: string;
   extraInfo: string;
-}
+};
 
 export default function BookingForm({ className }: BookingFormProps) {
-  const { register, handleSubmit, formState: { errors } } = useForm<FormInputs>();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormInputs>();
 
   const onSubmit = async (data: FormInputs) => {
     await fetch('https://submit-form.com/Zwt4r99h5', {
@@ -40,10 +44,13 @@ export default function BookingForm({ className }: BookingFormProps) {
       },
       body: JSON.stringify(data),
     });
-  }
+  };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={`${className} flex flex-col space-y-4 mt-4 text-left scheme-dark w-full`}>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className={`${className} flex flex-col space-y-4 mt-4 text-left scheme-dark w-full`}
+    >
       <h2 className='text-2xl'>Booking</h2>
 
       <input
@@ -58,7 +65,9 @@ export default function BookingForm({ className }: BookingFormProps) {
         placeholder='Event Date*'
         {...register('eventDate', { required: 'Event Date is required' })}
       />
-      {errors.eventDate && <span className="text-red-500 text-sm">{errors.eventDate.message}</span>}
+      {errors.eventDate && (
+        <span className='text-red-500 text-sm'>{errors.eventDate.message}</span>
+      )}
 
       <input
         type='time'
@@ -66,7 +75,9 @@ export default function BookingForm({ className }: BookingFormProps) {
         placeholder='Event Time*'
         {...register('eventTime', { required: 'Event Time is required' })}
       />
-      {errors.eventTime && <span className="text-red-500 text-sm">{errors.eventTime.message}</span>}
+      {errors.eventTime && (
+        <span className='text-red-500 text-sm'>{errors.eventTime.message}</span>
+      )}
 
       <hr className='py-2 border-none' />
 
@@ -77,14 +88,20 @@ export default function BookingForm({ className }: BookingFormProps) {
         placeholder='Company Name*'
         {...register('companyName', { required: 'Company Name is required' })}
       />
-      {errors.companyName && <span className="text-red-500 text-sm">{errors.companyName.message}</span>}
+      {errors.companyName && (
+        <span className='text-red-500 text-sm'>
+          {errors.companyName.message}
+        </span>
+      )}
 
       <input
         className='bg-transparent p-2 border-b border-0'
         placeholder='First Name*'
         {...register('firstName', { required: 'First Name is required' })}
       />
-      {errors.firstName && <span className="text-red-500 text-sm">{errors.firstName.message}</span>}
+      {errors.firstName && (
+        <span className='text-red-500 text-sm'>{errors.firstName.message}</span>
+      )}
 
       <input
         className='bg-transparent p-2 border-b border-0'
@@ -93,20 +110,24 @@ export default function BookingForm({ className }: BookingFormProps) {
       />
 
       <input
-        type="email"
+        type='email'
         className='bg-transparent p-2 border-b border-0'
         placeholder='Email*'
         {...register('email', { required: 'Email is required' })}
       />
-      {errors.email && <span className="text-red-500 text-sm">{errors.email.message}</span>}
+      {errors.email && (
+        <span className='text-red-500 text-sm'>{errors.email.message}</span>
+      )}
 
       <input
-        type="tel"
+        type='tel'
         className='bg-transparent p-2 border-b border-0'
         placeholder='Phone*'
         {...register('phone', { required: 'Phone is required' })}
       />
-      {errors.phone && <span className="text-red-500 text-sm">{errors.phone.message}</span>}
+      {errors.phone && (
+        <span className='text-red-500 text-sm'>{errors.phone.message}</span>
+      )}
 
       <input
         className='bg-transparent p-2 border-b border-0'
@@ -129,7 +150,9 @@ export default function BookingForm({ className }: BookingFormProps) {
         placeholder='Venue Name*'
         {...register('venueName', { required: 'Venue Name is required' })}
       />
-      {errors.venueName && <span className="text-red-500 text-sm">{errors.venueName.message}</span>}
+      {errors.venueName && (
+        <span className='text-red-500 text-sm'>{errors.venueName.message}</span>
+      )}
 
       <input
         className='bg-transparent p-2 border-b border-0'
@@ -154,14 +177,20 @@ export default function BookingForm({ className }: BookingFormProps) {
         placeholder='Venue City*'
         {...register('venueCity', { required: 'Venue City is required' })}
       />
-      {errors.venueCity && <span className="text-red-500 text-sm">{errors.venueCity.message}</span>}
+      {errors.venueCity && (
+        <span className='text-red-500 text-sm'>{errors.venueCity.message}</span>
+      )}
 
       <input
         className='bg-transparent p-2 border-b border-0'
         placeholder='Venue Country*'
         {...register('venueCountry', { required: 'Venue Country is required' })}
       />
-      {errors.venueCountry && <span className="text-red-500 text-sm">{errors.venueCountry.message}</span>}
+      {errors.venueCountry && (
+        <span className='text-red-500 text-sm'>
+          {errors.venueCountry.message}
+        </span>
+      )}
 
       <textarea
         className='bg-transparent p-2 border-b border-0 min-h-16 h-32 max-h-64'
@@ -174,6 +203,4 @@ export default function BookingForm({ className }: BookingFormProps) {
       </TextButton>
     </form>
   );
-
-
 }
