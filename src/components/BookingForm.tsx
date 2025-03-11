@@ -1,10 +1,10 @@
 'use client';
 
-import { useForm } from 'react-hook-form';
 import { useFormspark } from '@formspark/use-formspark';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 import TextButton from '@/components/buttons/TextButton';
-import { useState } from 'react';
 
 interface BookingFormProps {
   className?: string;
@@ -50,10 +50,9 @@ export default function BookingForm({ className }: BookingFormProps) {
         setSubmitted(true);
         setSubmitError(null);
       })
-      .catch((error) => {
+      .catch(() => {
         setSubmitError('An error occurred. Please try again later.');
-      }
-      );
+      });
   };
 
   return (
@@ -213,7 +212,10 @@ export default function BookingForm({ className }: BookingFormProps) {
       />
 
       {submitted && (
-        <span className='text-green-400 text-sm'>{"Your booking request has been sent! We will get back to you whenever we can."}</span>
+        <span className='text-green-400 text-sm'>
+          Your booking request has been sent! We will get back to you whenever
+          we can.
+        </span>
       )}
 
       {submitError && (
