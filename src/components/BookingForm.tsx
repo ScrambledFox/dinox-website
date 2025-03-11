@@ -60,20 +60,24 @@ export default function BookingForm({ className }: BookingFormProps) {
       />
 
       <input
-        type='date'
+        type='text'
+        onFocus={(e) => (e.target.type = 'date')}
         className='bg-transparent p-2 border-b border-0 [&::-webkit-calendar-picker-indicator]:invert opacity-75 hover:opacity-100'
         placeholder='Event Date*'
         {...register('eventDate', { required: 'Event Date is required' })}
+        onBlur={(e) => (e.target.type = 'text')}
       />
       {errors.eventDate && (
         <span className='text-red-500 text-sm'>{errors.eventDate.message}</span>
       )}
 
       <input
-        type='time'
+        type='text'
+        onFocus={(e) => (e.target.type = 'time')}
         className='bg-transparent p-2 border-b border-0 [&::-webkit-calendar-picker-indicator]:invert opacity-75 hover:opacity-100'
         placeholder='Event Time*'
         {...register('eventTime', { required: 'Event Time is required' })}
+        onBlur={(e) => (e.target.type = 'text')}
       />
       {errors.eventTime && (
         <span className='text-red-500 text-sm'>{errors.eventTime.message}</span>
