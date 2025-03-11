@@ -21,7 +21,7 @@ export default function HomePage() {
           src={backgroundImage}
           alt='Dinox Crowd'
           quality={100}
-          className='-z-10 object-cover'
+          className='-z-10 object-cover object-right'
           fill={true}
           priority
         />
