@@ -1,8 +1,10 @@
 'use client';
 
 import { useForm } from 'react-hook-form';
+import { useFormspark } from '@formspark/use-formspark';
 
 import TextButton from '@/components/buttons/TextButton';
+import { useState } from 'react';
 
 interface BookingFormProps {
   className?: string;
@@ -35,15 +37,23 @@ export default function BookingForm({ className }: BookingFormProps) {
     formState: { errors },
   } = useForm<FormInputs>();
 
+  const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
+  const [submit, submitting] = useFormspark({
+    formId: 'Zwt4r99h5',
+  });
+
   const onSubmit = async (data: FormInputs) => {
-    await fetch('https://submit-form.com/Zwt4r99h5', {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
+    await submit(data)
+      .then(() => {
+        setSubmitted(true);
+        setSubmitError(null);
+      })
+      .catch((error) => {
+        setSubmitError('An error occurred. Please try again later.');
+      }
+      );
   };
 
   return (
@@ -202,8 +212,21 @@ export default function BookingForm({ className }: BookingFormProps) {
         {...register('extraInfo', { required: false })}
       />
 
-      <TextButton type='submit' className='text-black bg-white p-4 rounded-lg'>
-        Request Booking
+      {submitted && (
+        <span className='text-green-400 text-sm'>{"Your booking request has been sent! We will get back to you whenever we can."}</span>
+      )}
+
+      {submitError && (
+        <span className='text-red-500 text-sm'>{submitError}</span>
+      )}
+
+      <TextButton
+        type='submit'
+        variant='primary'
+        className='text-black bg-white p-4 rounded-lg'
+        disabled={submitting || submitted}
+      >
+        {submitting ? 'Submitting...' : 'Request Booking'}
       </TextButton>
     </form>
   );
