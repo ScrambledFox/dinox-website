@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import { useCookieBanner } from '@/contexts/CookieConsentContext';
 
 export default function CookieConsent() {
-  const { showBanner, openBanner, closeBanner } = useCookieBanner();
+  const { showBanner, openBanner, closeBanner, setConsent } = useCookieBanner();
 
   useEffect(() => {
     const consentCookie = Cookies.get('cookieConsent');
@@ -18,11 +18,13 @@ export default function CookieConsent() {
 
   const handleAccept = () => {
     closeBanner();
+    setConsent(true);
     Cookies.set('cookieConsent', 'accepted', { expires: 365 });
   };
 
   const handleDecline = () => {
     closeBanner();
+    setConsent(false);
     Cookies.set('cookieConsent', 'rejected', { expires: 365 });
   };
 

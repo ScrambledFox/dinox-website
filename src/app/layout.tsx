@@ -1,9 +1,9 @@
-import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
 import * as React from 'react';
 
 import '@/styles/globals.css';
 
+import ConsentedAnalytics from '@/components/ConsentedAnalytics';
 import CookieConsent from '@/components/CookieConsent';
 import Footer from '@/components/Footer';
 import NavBar from '@/components/NavBar';
@@ -69,7 +69,7 @@ export default function RootLayout({
           </main>
 
           <CookieConsent />
-          <Analytics />
+          <ConsentedAnalytics />
 
           <Footer />
         </body>
