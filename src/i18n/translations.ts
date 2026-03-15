@@ -164,7 +164,7 @@ const translations = {
     about_preview_title: 'DINOX PREVIEW',
     about_preview_tagline: 'Wat je ziet, is wat je krijgt.',
     about_preview_cta:
-      'Klaar om die energie naar jouw evenement te brengen? {link} en zeker je boeking.',
+      'Klaar om die energie naar jouw evenement te brengen? {link} en zet je boeking vast.',
     about_preview_link: 'Neem contact op',
 
     // Booking page
