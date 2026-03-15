@@ -60,23 +60,23 @@ export default function RootLayout({
 }) {
   return (
     <LanguageProvider>
-    <CookieConsentProvider>
-      <html
-        className={`${bungee.variable} ${doppio.variable} font-primary text-white`}
-      >
-        <body>
-          <NavBar />
-          <main className='relative flex min-h-screen flex-col items-center text-center'>
-            {children}
-          </main>
+      <CookieConsentProvider>
+        <html
+          className={`${bungee.variable} ${doppio.variable} font-primary text-white`}
+        >
+          <body>
+            <NavBar />
+            <main className='relative flex min-h-screen flex-col items-center text-center'>
+              {children}
+            </main>
 
-          <CookieConsent />
-          <ConsentedAnalytics />
+            <CookieConsent />
+            <ConsentedAnalytics />
 
-          <Footer />
-        </body>
-      </html>
-    </CookieConsentProvider>
+            <Footer />
+          </body>
+        </html>
+      </CookieConsentProvider>
     </LanguageProvider>
   );
 }

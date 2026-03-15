@@ -51,7 +51,7 @@ const translations = {
     // Booking page
     booking_header: 'Book DJ Dinox',
     booking_subheader:
-      "Bring high-energy hardstyle and frenchcore to your festival, club night, or private event. Fill in the form below and we\u2019ll be in touch.",
+      'Bring high-energy hardstyle and frenchcore to your festival, club night, or private event. Fill in the form below and we\u2019ll be in touch.',
     booking_info_response: 'We will get back to you as soon as possible',
     booking_info_types: 'Festivals, clubs & private events',
     booking_info_contact: 'Direct contact:',

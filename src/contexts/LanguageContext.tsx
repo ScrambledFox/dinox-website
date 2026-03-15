@@ -8,7 +8,10 @@ import {
   useState,
 } from 'react';
 
-import translations, { type Locale, type TranslationKey } from '@/i18n/translations';
+import translations, {
+  type Locale,
+  type TranslationKey,
+} from '@/i18n/translations';
 
 interface LanguageContextValue {
   locale: Locale;

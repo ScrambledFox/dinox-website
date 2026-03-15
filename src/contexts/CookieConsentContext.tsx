@@ -26,7 +26,7 @@ export default function CookieConsentProvider({
 }) {
   const [showBanner, setShowBanner] = useState(false);
   const [consentGiven, setConsentGiven] = useState(
-    Cookies.get('cookieConsent') === 'accepted'
+    Cookies.get('cookieConsent') === 'accepted',
   );
 
   const openBanner = () => setShowBanner(true);

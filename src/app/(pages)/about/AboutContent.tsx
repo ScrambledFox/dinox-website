@@ -52,25 +52,37 @@ export default function AboutContent() {
           <p>{t('about_producer_p2')}</p>
           <br />
           <p>
-            {t('about_producer_p3').split('Don\u2019t Stop Running').map((part, i) =>
-              i === 0 ? (
-                <span key={i}>{part}<em>Don&apos;t Stop Running</em></span>
-              ) : (
-                <span key={i}>
-                  {part.split('Multiverse').map((sub, j) =>
-                    j === 0 ? (
-                      <span key={j}>{sub}<em>Multiverse</em></span>
-                    ) : (
-                      <span key={j}>{sub}</span>
-                    )
-                  )}
-                </span>
-              )
-            )}
+            {t('about_producer_p3')
+              .split('Don\u2019t Stop Running')
+              .map((part, i) =>
+                i === 0 ? (
+                  <span key={i}>
+                    {part}
+                    <em>Don&apos;t Stop Running</em>
+                  </span>
+                ) : (
+                  <span key={i}>
+                    {part.split('Multiverse').map((sub, j) =>
+                      j === 0 ? (
+                        <span key={j}>
+                          {sub}
+                          <em>Multiverse</em>
+                        </span>
+                      ) : (
+                        <span key={j}>{sub}</span>
+                      ),
+                    )}
+                  </span>
+                ),
+              )}
           </p>
         </UnopinionatedAboutBlock>
 
-        <AboutBlock title={t('about_dj_title')} coverImage={djImage} textImage={famousImage}>
+        <AboutBlock
+          title={t('about_dj_title')}
+          coverImage={djImage}
+          textImage={famousImage}
+        >
           <p>{t('about_dj_p1')}</p>
           <br />
           <p>{t('about_dj_p2')}</p>

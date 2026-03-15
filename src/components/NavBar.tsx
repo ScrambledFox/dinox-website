@@ -38,7 +38,9 @@ const NavBar = () => {
     >
       <span
         className={
-          locale === 'en' ? 'text-primary-400' : 'text-white/50 hover:text-white/80'
+          locale === 'en'
+            ? 'text-primary-400'
+            : 'text-white/50 hover:text-white/80'
         }
       >
         EN
@@ -46,7 +48,9 @@ const NavBar = () => {
       <span className='text-white/30 mx-1'>|</span>
       <span
         className={
-          locale === 'nl' ? 'text-primary-400' : 'text-white/50 hover:text-white/80'
+          locale === 'nl'
+            ? 'text-primary-400'
+            : 'text-white/50 hover:text-white/80'
         }
       >
         NL

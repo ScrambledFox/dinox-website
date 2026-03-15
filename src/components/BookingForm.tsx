@@ -103,7 +103,9 @@ export default function BookingForm({ className }: BookingFormProps) {
       <input
         className='bg-transparent p-2 border-b border-0'
         placeholder={t('form_company_name')}
-        {...register('companyName', { required: t('form_company_name_required') })}
+        {...register('companyName', {
+          required: t('form_company_name_required'),
+        })}
       />
       {errors.companyName && (
         <span className='text-red-500 text-sm'>
@@ -201,7 +203,9 @@ export default function BookingForm({ className }: BookingFormProps) {
       <input
         className='bg-transparent p-2 border-b border-0'
         placeholder={t('form_venue_country')}
-        {...register('venueCountry', { required: t('form_venue_country_required') })}
+        {...register('venueCountry', {
+          required: t('form_venue_country_required'),
+        })}
       />
       {errors.venueCountry && (
         <span className='text-red-500 text-sm'>
