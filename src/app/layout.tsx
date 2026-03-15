@@ -11,6 +11,7 @@ import NavBar from '@/components/NavBar';
 import { bungee, doppio } from '@/app/fonts';
 import { siteConfig } from '@/constant/config';
 import CookieConsentProvider from '@/contexts/CookieConsentContext';
+import { LanguageProvider } from '@/contexts/LanguageContext';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -58,6 +59,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+    <LanguageProvider>
     <CookieConsentProvider>
       <html
         className={`${bungee.variable} ${doppio.variable} font-primary text-white`}
@@ -75,5 +77,6 @@ export default function RootLayout({
         </body>
       </html>
     </CookieConsentProvider>
+    </LanguageProvider>
   );
 }

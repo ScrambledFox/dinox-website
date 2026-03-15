@@ -4,9 +4,11 @@ import UnderlineLink from '@/components/links/UnderlineLink';
 import Socials from '@/components/Socials';
 
 import { useCookieBanner } from '@/contexts/CookieConsentContext';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
   const { openBanner } = useCookieBanner();
+  const { t } = useLanguage();
 
   const handleCookieButtonClick = () => {
     openBanner();
@@ -16,7 +18,7 @@ const Footer = () => {
     <>
       <div className='w-full p-2 flex flex-col justify-center gap-12 text-white bg-black py-12 text-center'>
         <h1 className='text-2xl md:text-8xl font-header'>
-          DJ & PRODUCER DINOX
+          {t('footer_title')}
         </h1>
 
         <div className='flex gap-2 md:gap-[16px] justify-center'>
@@ -25,7 +27,7 @@ const Footer = () => {
 
         <div className='flex flex-col gap-3'>
           <p>
-            © {new Date().getFullYear()} - DJ DINOX - Designed by{' '}
+            © {new Date().getFullYear()} - DJ DINOX - {t('footer_designed_by')}{' '}
             <UnderlineLink
               className=''
               href='https://www.linkedin.com/in/jorislodewijks/'
@@ -34,15 +36,15 @@ const Footer = () => {
             </UnderlineLink>
           </p>
           <div className=''>
-            <UnderlineLink href='/privacy'>Privacy Policy</UnderlineLink>
+            <UnderlineLink href='/privacy'>{t('footer_privacy')}</UnderlineLink>
             {' | '}
-            <UnderlineLink href='/privacy'>Terms of Service</UnderlineLink>
+            <UnderlineLink href='/privacy'>{t('footer_terms')}</UnderlineLink>
             {' | '}
-            <UnderlineLink href='/privacy'>Cookies Policy</UnderlineLink>
+            <UnderlineLink href='/privacy'>{t('footer_cookies')}</UnderlineLink>
           </div>
           <p>
             <UnderlineLink href='#cookies' onClick={handleCookieButtonClick}>
-              Cookies Settings
+              {t('footer_cookie_settings')}
             </UnderlineLink>
           </p>
         </div>
