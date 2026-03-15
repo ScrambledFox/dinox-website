@@ -40,7 +40,7 @@ export default function HomePage() {
       >
         {/* Responsive left padding */}
         <div className='w-full px-8 sm:px-12 md:px-20 lg:px-28 ultrawide:px-64'>
-          <div className='flex flex-col gap-5 items-start w-full md:w-[44%] lg:w-[40%] ultrawide:w-[860px]'>
+          <div className='flex flex-col gap-5 items-center text-center md:items-start md:text-left w-full md:w-[44%] lg:w-[40%] ultrawide:w-[860px]'>
             {/* Identity tag */}
             <p className='text-xs md:text-sm font-primary uppercase tracking-[0.2em] text-primary-400'>
               {t('home_identity')}
@@ -62,7 +62,7 @@ export default function HomePage() {
             </p>
 
             {/* CTAs */}
-            <div className='flex flex-row gap-3 flex-wrap'>
+            <div className='flex flex-row gap-3 flex-wrap justify-center md:justify-start'>
               <ButtonLink
                 href='/booking'
                 variant='light'
