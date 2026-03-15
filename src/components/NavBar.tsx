@@ -40,7 +40,7 @@ const NavBar = () => {
                     key={index}
                     href={link.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className={`px-3 py-2 rounded-md font-medium underline-offset-4 hover:text-gray-400 ${pathname === link.href ? 'underline' : ''}`}
+                    className={`px-3 py-2 rounded-md font-medium underline-offset-4 hover:text-primary-400 transition-colors duration-150 ${pathname === link.href ? 'text-primary-400 underline' : ''}`}
                   >
                     {link.text}
                   </Link>
@@ -99,7 +99,7 @@ const NavBar = () => {
                 key={index}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className={`block px-3 py-2 rounded-md text-base font-medium underline-offset-4 ${pathname === link.href ? 'underline' : ''}`}
+                className={`block px-3 py-2 rounded-md text-base font-medium underline-offset-4 hover:text-primary-400 transition-colors duration-150 ${pathname === link.href ? 'text-primary-400 underline' : ''}`}
               >
                 {link.text}
               </Link>

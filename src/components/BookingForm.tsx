@@ -60,7 +60,7 @@ export default function BookingForm({ className }: BookingFormProps) {
       onSubmit={handleSubmit(onSubmit)}
       className={`${className} flex flex-col space-y-4 mt-4 text-left scheme-dark w-full`}
     >
-      <h2 className='text-2xl'>Booking</h2>
+      <h2 className='text-2xl font-header'>Booking</h2>
 
       <input
         className='bg-transparent p-2 border-b border-0'
@@ -94,7 +94,7 @@ export default function BookingForm({ className }: BookingFormProps) {
 
       <hr className='py-2 border-none' />
 
-      <h2 className='text-2xl'>Your Information</h2>
+      <h2 className='text-2xl font-header'>Your Information</h2>
 
       <input
         className='bg-transparent p-2 border-b border-0'
@@ -156,7 +156,7 @@ export default function BookingForm({ className }: BookingFormProps) {
 
       <hr className='py-2 border-none' />
 
-      <h2 className='text-2xl'>Event Information</h2>
+      <h2 className='text-2xl font-header'>Event Information</h2>
 
       <input
         className='bg-transparent p-2 border-b border-0'

@@ -122,7 +122,7 @@ export default function AboutPage() {
           coverImage={studioImage}
           sideElement={<PromoVideo />}
         >
-          <h1 className='text-center'>WHAT YOU SEE IS WHAT YOU GET</h1>
+          <h1 className='text-center font-header'>WHAT YOU SEE IS WHAT YOU GET</h1>
         </UnopinionatedAboutBlock>
       </div>
     </main>

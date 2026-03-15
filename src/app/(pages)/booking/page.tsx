@@ -32,7 +32,7 @@ export default function BookingPage() {
           <BookingForm />
         </div>
         <div className='flex-1 justify-center items-center'>
-          <Image src={dinoxBackImage} alt='Dinox Back' quality={100} priority />
+          <Image src={dinoxBackImage} alt='Dinox Back' quality={100} priority placeholder='blur' />
         </div>
       </div>
     </main>
