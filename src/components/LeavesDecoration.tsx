@@ -15,8 +15,8 @@ export default function LeavesDecoration() {
     >
       <Image
         src={leavesImage}
-        alt='leaves'
-        className='absolute z-0 top-0 left-0 w-full blur-[4px]'
+        alt=''
+        className='absolute z-0 top-0 left-0 w-full blur-[4px] opacity-30'
         priority={true}
       />
     </motion.div>

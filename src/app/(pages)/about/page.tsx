@@ -18,7 +18,8 @@ import workingImage from '/public/images/working.png';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Learn more about Dinox',
+  description:
+    'Meet DJ Dinox, hardstyle and frenchcore DJ/producer from the Netherlands, performing at festivals and clubs across Europe.',
 };
 
 export default function AboutPage() {
@@ -27,9 +28,10 @@ export default function AboutPage() {
   return (
     <main className='flex flex-col justify-center items-center'>
       <div className='max-w-[1000px] mb-16 mx-2'>
-        <Header text='Want to know more about dinox?' className='mb-12' />
+        <Header text='About Dinox' className='mb-12' />
         <Subheader>
-          Step into his timeline and meet the person behind Dinox.
+          DJ, producer, and performer from the Netherlands, known for
+          hardstyle, frenchcore, and rawstyle.
         </Subheader>
       </div>
 
@@ -41,26 +43,25 @@ export default function AboutPage() {
           priority
         >
           <p>
-            At {dinoxAge} years old, DJ/Producer Dinox is a force to be reckoned
-            with in the Harderstyle music scene. A lifelong fan of rapid fast
-            BPM, Dinox discovered the electrifying energy of high-tempo beats at
-            a young age and has been hooked ever since.
+            At {dinoxAge} years old, DJ/Producer Dinox is a force to be
+            reckoned with in the hardstyle and frenchcore scene. A lifelong fan
+            of high-BPM music, Dinox discovered the electrifying energy of
+            high-tempo beats at a young age and has been hooked ever since.
           </p>
           <br />
           <p>
             With a mission to spread positive energy through music and
             performance, Dinox creates an unforgettable experience for every
-            audience. Known for his dynamic sets and infectious enthusiasm, DJ
-            Dinox combines passion with skill to deliver high-energy
-            performances that leave crowds buzzing. Whether it's at a packed
-            nightclub, a massive festival, or an intimate party, Dinox brings a
-            unique blend of Harderstyle tracks that keep the dance floor alive.
+            audience. Known for his dynamic sets and infectious enthusiasm, he
+            combines passion with skill to deliver high-energy performances that
+            leave crowds buzzing, whether at a packed nightclub, a festival
+            stage, or an intimate event.
           </p>
           <br />
           <p>
-            Join Dinox on a musical journey where the beats are fast, the energy
-            is high, and the vibes are always positive. Let the music move you
-            and feel the rush that has captivated Dinox since childhood.
+            Join Dinox on a journey where the beats are fast, the energy is
+            high, and the vibes are always positive. Let the music move you and
+            feel the rush that has driven Dinox since childhood.
           </p>
         </AboutBlock>
 
@@ -70,25 +71,23 @@ export default function AboutPage() {
           sideElement={<SpotifyEmbed />}
         >
           <p>
-            As a producer, Dinox Started crafting his own tracks since he was
-            18, specializing in hardstyle, hardcore, frenchcore, and rawstyle
-            music.
+            As a producer, Dinox started crafting his own tracks at 18,
+            specializing in hardstyle, hardcore, frenchcore, and rawstyle.
           </p>
           <br />
           <p>
-            His goal is to infuse his tracks with emotion, creating a listening
-            experience that makes the listener feel empowered and ready to
-            conquer the world, generating positive energy and uplifting their
-            spirits.
+            His goal is to infuse every track with emotion, creating a
+            listening experience that makes the listener feel empowered and
+            ready to take on the world, channeling positive energy and lifting
+            their spirits.
           </p>
           <br />
           <p>
-            Lots of inspiration comes from the harderstyle scene, other music
-            genres and fellow artists ideas. Getting his inspiration from
-            different types of music genres, Dinox produced tracks like ‘don’t
-            stop running’ and ‘Multiverse’. By fusing different types of music
-            genres into one idea, he creates a whole new level of sound for the
-            harderstyle scene.
+            Drawing inspiration from the harderstyle scene, other music genres,
+            and fellow artists, Dinox produced tracks like{' '}
+            <em>Don&apos;t Stop Running</em> and <em>Multiverse</em>. By fusing
+            different genre influences into a single vision, he carves out a
+            distinctive sound within the harderstyle scene.
           </p>
         </UnopinionatedAboutBlock>
 
@@ -96,24 +95,24 @@ export default function AboutPage() {
           <p>
             Dinox is known for his powerful, atmospheric sets, packed with
             intense kicks and melodic tracks that stay in your head long after
-            the music fades. With a keen ear and sharp attention to detail,
-            Dinox carefully selects tracks that not only stirs the crowd, but
-            also perfectly match the vibe of the event.
+            the music fades. With a keen ear and sharp attention to detail, he
+            carefully selects tracks that stir the crowd and perfectly match the
+            energy of the event.
           </p>
           <br />
           <p>
-            Specializing in Frenchcore, Hardcore, Hardstyle, and Rawstyle, he
+            Specializing in frenchcore, hardcore, hardstyle, and rawstyle, he
             consistently captivates his audience with unforgettable moments. New
-            sets are regularly uploaded to SoundCloud, giving fans a taste of
-            his distinctive style.
+            sets are regularly uploaded to SoundCloud, giving fans a direct
+            taste of his distinctive style.
           </p>
           <br />
           <p>
-            Having performed at events like ‘RandRock’ and the ‘Twenterand Run’
+            Having performed at events like RandRock and the Twenterand Run
             festival, Dinox has proven he knows how to elevate a crowd and take
-            any festival to the next level. Add Dinox to your lineup and prepare
-            for an explosive experience that will make the day truly
-            unforgettable!
+            any event to the next level. Add Dinox to your lineup and prepare
+            for an explosive performance that will make the day truly
+            unforgettable.
           </p>
         </AboutBlock>
 
@@ -122,7 +121,20 @@ export default function AboutPage() {
           coverImage={studioImage}
           sideElement={<PromoVideo />}
         >
-          <h1 className='text-center font-header'>WHAT YOU SEE IS WHAT YOU GET</h1>
+          <h2 className='text-center font-header text-2xl md:text-4xl'>
+            What you see is what you get.
+          </h2>
+          <br />
+          <p>
+            Ready to bring that energy to your event?{' '}
+            <a
+              href='/booking'
+              className='text-primary-400 underline underline-offset-2 hover:text-primary-300 transition-colors'
+            >
+              Get in touch
+            </a>{' '}
+            and secure your booking.
+          </p>
         </UnopinionatedAboutBlock>
       </div>
     </main>

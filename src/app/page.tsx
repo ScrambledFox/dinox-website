@@ -19,11 +19,12 @@ export default function HomePage() {
       >
         <Image
           src={backgroundImage}
-          alt='Dinox Crowd'
+          alt='DJ Dinox performing for a crowd'
           quality={100}
           className='-z-10 object-cover object-right'
           fill={true}
           priority
+          placeholder='blur'
         />
       </motion.div>
 
@@ -31,38 +32,56 @@ export default function HomePage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.1 }}
-        className='w-full h-screen bg-black/50 flex flex-col justify-center'
+        className='w-full h-screen bg-black/55 flex flex-col justify-center'
       >
-        <div className='flex flex-row justify-center md:justify-start md:ml-16 ultrawide:ml-64'>
-          <div className='flex flex-col gap-9 w-[80%] items-center pt-32 md:w-[40%] ultrawide:w-[900px]'>
-            <h1 className='text-2xl md:text-6xl font-header text-white uppercase'>
-              Unleash the beats
-            </h1>
-            <p className='text-sm md:text-xl text-white text-justify [text-align-last:center]'>
-              Dive into the heart-pounding beats of DINOX. Known for
-              electrifying hardstyle and relentless frenchcore, DINOX delivers
-              intense, high-energy performances that will keep you moving all
-              night long. Don’t miss out on the raw power and adrenaline of the
-              underground sound.
+        {/* Responsive left padding */}
+        <div className='w-full px-8 sm:px-12 md:px-20 lg:px-28 ultrawide:px-64'>
+          <div className='flex flex-col gap-5 items-start w-full md:w-[44%] lg:w-[40%] ultrawide:w-[860px]'>
+            {/* Identity tag */}
+            <p className='text-xs md:text-sm font-primary uppercase tracking-[0.2em] text-primary-400'>
+              DJ · Producer · The Netherlands
             </p>
-            <div className='flex flex-row gap-2 justify-evenly text-center'>
-              <ButtonLink
-                href='/about'
-                variant='black'
-                className='uppercase'
-                size='4xl'
-              >
-                Learn more
-              </ButtonLink>
+
+            {/* Artist name */}
+            <h1 className='text-7xl sm:text-8xl md:text-9xl font-header text-white uppercase leading-none'>
+              Dinox
+            </h1>
+
+            {/* Genre descriptor */}
+            <p className='text-sm md:text-lg font-header text-white/60 uppercase tracking-widest'>
+              Hardstyle · Frenchcore · Rawstyle
+            </p>
+
+            {/* Description */}
+            <p className='text-sm md:text-base text-white/75 leading-relaxed max-w-sm'>
+              High-energy sets for festival stages and club floors: relentless,
+              precise, and built to move crowds.
+            </p>
+
+            {/* CTAs */}
+            <div className='flex flex-row gap-3 flex-wrap'>
               <ButtonLink
                 href='/booking'
                 variant='light'
                 className='uppercase'
                 size='4xl'
               >
-                Book now
+                Book Now
+              </ButtonLink>
+              <ButtonLink
+                href='/about'
+                variant='black'
+                className='uppercase'
+                size='4xl'
+              >
+                About Dinox
               </ButtonLink>
             </div>
+
+            {/* Credibility line */}
+            <p className='text-xs text-white/40 font-primary uppercase tracking-wider'>
+              Performed at RandRock · Twenterand Run Festival
+            </p>
           </div>
         </div>
       </motion.div>

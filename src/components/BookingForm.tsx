@@ -213,8 +213,7 @@ export default function BookingForm({ className }: BookingFormProps) {
 
       {submitted && (
         <span className='text-green-400 text-sm'>
-          Your booking request has been sent! We will get back to you whenever
-          we can.
+          Booking request received. We will get back to you as soon as possible.
         </span>
       )}
 
