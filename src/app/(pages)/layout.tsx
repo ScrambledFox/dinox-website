@@ -19,6 +19,7 @@ export default function PageLayout({
         className='!fixed -z-10 w-full h-full object-cover object-top'
         fill
         priority
+        placeholder='blur'
       />
       <div className='flex-grow relative pt-32'>{children}</div>
     </>

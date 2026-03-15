@@ -6,6 +6,8 @@ import { useForm } from 'react-hook-form';
 
 import TextButton from '@/components/buttons/TextButton';
 
+import { useLanguage } from '@/contexts/LanguageContext';
+
 interface BookingFormProps {
   className?: string;
 }
@@ -31,6 +33,8 @@ type FormInputs = {
 };
 
 export default function BookingForm({ className }: BookingFormProps) {
+  const { t } = useLanguage();
+
   const {
     register,
     handleSubmit,
@@ -51,7 +55,7 @@ export default function BookingForm({ className }: BookingFormProps) {
         setSubmitError(null);
       })
       .catch(() => {
-        setSubmitError('An error occurred. Please try again later.');
+        setSubmitError(t('form_error'));
       });
   };
 
@@ -60,11 +64,11 @@ export default function BookingForm({ className }: BookingFormProps) {
       onSubmit={handleSubmit(onSubmit)}
       className={`${className} flex flex-col space-y-4 mt-4 text-left scheme-dark w-full`}
     >
-      <h2 className='text-2xl'>Booking</h2>
+      <h2 className='text-2xl font-header'>{t('form_section_booking')}</h2>
 
       <input
         className='bg-transparent p-2 border-b border-0'
-        placeholder='Event Name'
+        placeholder={t('form_event_name')}
         {...register('eventName', { required: false })}
       />
 
@@ -72,8 +76,8 @@ export default function BookingForm({ className }: BookingFormProps) {
         type='text'
         onFocus={(e) => (e.target.type = 'date')}
         className='bg-transparent p-2 border-b border-0 [&::-webkit-calendar-picker-indicator]:invert opacity-75 hover:opacity-100'
-        placeholder='Event Date*'
-        {...register('eventDate', { required: 'Event Date is required' })}
+        placeholder={t('form_event_date')}
+        {...register('eventDate', { required: t('form_event_date_required') })}
         onBlur={(e) => (e.target.type = 'text')}
       />
       {errors.eventDate && (
@@ -84,8 +88,8 @@ export default function BookingForm({ className }: BookingFormProps) {
         type='text'
         onFocus={(e) => (e.target.type = 'time')}
         className='bg-transparent p-2 border-b border-0 [&::-webkit-calendar-picker-indicator]:invert opacity-75 hover:opacity-100'
-        placeholder='Event Time*'
-        {...register('eventTime', { required: 'Event Time is required' })}
+        placeholder={t('form_event_time')}
+        {...register('eventTime', { required: t('form_event_time_required') })}
         onBlur={(e) => (e.target.type = 'text')}
       />
       {errors.eventTime && (
@@ -94,12 +98,14 @@ export default function BookingForm({ className }: BookingFormProps) {
 
       <hr className='py-2 border-none' />
 
-      <h2 className='text-2xl'>Your Information</h2>
+      <h2 className='text-2xl font-header'>{t('form_section_your_info')}</h2>
 
       <input
         className='bg-transparent p-2 border-b border-0'
-        placeholder='Company Name*'
-        {...register('companyName', { required: 'Company Name is required' })}
+        placeholder={t('form_company_name')}
+        {...register('companyName', {
+          required: t('form_company_name_required'),
+        })}
       />
       {errors.companyName && (
         <span className='text-red-500 text-sm'>
@@ -109,8 +115,8 @@ export default function BookingForm({ className }: BookingFormProps) {
 
       <input
         className='bg-transparent p-2 border-b border-0'
-        placeholder='First Name*'
-        {...register('firstName', { required: 'First Name is required' })}
+        placeholder={t('form_first_name')}
+        {...register('firstName', { required: t('form_first_name_required') })}
       />
       {errors.firstName && (
         <span className='text-red-500 text-sm'>{errors.firstName.message}</span>
@@ -118,15 +124,15 @@ export default function BookingForm({ className }: BookingFormProps) {
 
       <input
         className='bg-transparent p-2 border-b border-0'
-        placeholder='Last Name'
+        placeholder={t('form_last_name')}
         {...register('lastName', { required: false })}
       />
 
       <input
         type='email'
         className='bg-transparent p-2 border-b border-0'
-        placeholder='Email*'
-        {...register('email', { required: 'Email is required' })}
+        placeholder={t('form_email')}
+        {...register('email', { required: t('form_email_required') })}
       />
       {errors.email && (
         <span className='text-red-500 text-sm'>{errors.email.message}</span>
@@ -135,8 +141,8 @@ export default function BookingForm({ className }: BookingFormProps) {
       <input
         type='tel'
         className='bg-transparent p-2 border-b border-0'
-        placeholder='Phone*'
-        {...register('phone', { required: 'Phone is required' })}
+        placeholder={t('form_phone')}
+        {...register('phone', { required: t('form_phone_required') })}
       />
       {errors.phone && (
         <span className='text-red-500 text-sm'>{errors.phone.message}</span>
@@ -144,24 +150,24 @@ export default function BookingForm({ className }: BookingFormProps) {
 
       <input
         className='bg-transparent p-2 border-b border-0'
-        placeholder='City'
+        placeholder={t('form_city')}
         {...register('promoterCity', { required: false })}
       />
 
       <input
         className='bg-transparent p-2 border-b border-0'
-        placeholder='Country'
+        placeholder={t('form_country')}
         {...register('promoterCountry', { required: false })}
       />
 
       <hr className='py-2 border-none' />
 
-      <h2 className='text-2xl'>Event Information</h2>
+      <h2 className='text-2xl font-header'>{t('form_section_event_info')}</h2>
 
       <input
         className='bg-transparent p-2 border-b border-0'
-        placeholder='Venue Name*'
-        {...register('venueName', { required: 'Venue Name is required' })}
+        placeholder={t('form_venue_name')}
+        {...register('venueName', { required: t('form_venue_name_required') })}
       />
       {errors.venueName && (
         <span className='text-red-500 text-sm'>{errors.venueName.message}</span>
@@ -169,26 +175,26 @@ export default function BookingForm({ className }: BookingFormProps) {
 
       <input
         className='bg-transparent p-2 border-b border-0'
-        placeholder='Street'
+        placeholder={t('form_street')}
         {...register('venueStreet', { required: false })}
       />
 
       <input
         className='bg-transparent p-2 border-b border-0'
-        placeholder='House Number'
+        placeholder={t('form_house_number')}
         {...register('venueHouseNumber', { required: false })}
       />
 
       <input
         className='bg-transparent p-2 border-b border-0'
-        placeholder='Postal Code'
+        placeholder={t('form_postal_code')}
         {...register('venuePostalCode', { required: false })}
       />
 
       <input
         className='bg-transparent p-2 border-b border-0'
-        placeholder='Venue City*'
-        {...register('venueCity', { required: 'Venue City is required' })}
+        placeholder={t('form_venue_city')}
+        {...register('venueCity', { required: t('form_venue_city_required') })}
       />
       {errors.venueCity && (
         <span className='text-red-500 text-sm'>{errors.venueCity.message}</span>
@@ -196,8 +202,10 @@ export default function BookingForm({ className }: BookingFormProps) {
 
       <input
         className='bg-transparent p-2 border-b border-0'
-        placeholder='Venue Country*'
-        {...register('venueCountry', { required: 'Venue Country is required' })}
+        placeholder={t('form_venue_country')}
+        {...register('venueCountry', {
+          required: t('form_venue_country_required'),
+        })}
       />
       {errors.venueCountry && (
         <span className='text-red-500 text-sm'>
@@ -207,15 +215,12 @@ export default function BookingForm({ className }: BookingFormProps) {
 
       <textarea
         className='bg-transparent p-2 border-b border-0 min-h-16 h-32 max-h-64'
-        placeholder='Optional extra information about the event'
+        placeholder={t('form_extra_info')}
         {...register('extraInfo', { required: false })}
       />
 
       {submitted && (
-        <span className='text-green-400 text-sm'>
-          Your booking request has been sent! We will get back to you whenever
-          we can.
-        </span>
+        <span className='text-green-400 text-sm'>{t('form_success')}</span>
       )}
 
       {submitError && (
@@ -228,7 +233,7 @@ export default function BookingForm({ className }: BookingFormProps) {
         className='text-black bg-white p-4 rounded-lg'
         disabled={submitting || submitted}
       >
-        {submitting ? 'Submitting...' : 'Request Booking'}
+        {submitting ? t('form_submitting') : t('form_submit')}
       </TextButton>
     </form>
   );

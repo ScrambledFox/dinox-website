@@ -1,9 +1,9 @@
-import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
 import * as React from 'react';
 
 import '@/styles/globals.css';
 
+import ConsentedAnalytics from '@/components/ConsentedAnalytics';
 import CookieConsent from '@/components/CookieConsent';
 import Footer from '@/components/Footer';
 import NavBar from '@/components/NavBar';
@@ -11,6 +11,7 @@ import NavBar from '@/components/NavBar';
 import { bungee, doppio } from '@/app/fonts';
 import { siteConfig } from '@/constant/config';
 import CookieConsentProvider from '@/contexts/CookieConsentContext';
+import { LanguageProvider } from '@/contexts/LanguageContext';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -58,22 +59,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <CookieConsentProvider>
-      <html
-        className={`${bungee.variable} ${doppio.variable} font-primary text-white`}
-      >
-        <body>
-          <NavBar />
-          <main className='relative flex min-h-screen flex-col items-center text-center'>
-            {children}
-          </main>
+    <LanguageProvider>
+      <CookieConsentProvider>
+        <html
+          className={`${bungee.variable} ${doppio.variable} font-primary text-white`}
+        >
+          <body>
+            <NavBar />
+            <main className='relative flex min-h-screen flex-col items-center text-center'>
+              {children}
+            </main>
 
-          <CookieConsent />
-          <Analytics />
+            <CookieConsent />
+            <ConsentedAnalytics />
 
-          <Footer />
-        </body>
-      </html>
-    </CookieConsentProvider>
+            <Footer />
+          </body>
+        </html>
+      </CookieConsentProvider>
+    </LanguageProvider>
   );
 }
